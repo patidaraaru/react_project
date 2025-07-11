@@ -5,6 +5,9 @@ import LoginProvider from "./Component/Auth/LoginProvider";
 import Login from "./Component/Auth/Login";
 import PrivateRoute from "./Component/Auth/LoginPrivateRoute";
 import Navigation from "./Component/Navigation";
+import ProductListCard from "./Component/Category/ProductListCard";
+import NewProductList from "./Component/Pages/NewProductList";
+import NewProductDetail from "./Component/Pages/NewProductDetail";
 
 function App() {
   const Home = lazy(() => import("./Component/Pages/Home"));
@@ -64,8 +67,25 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
               <Route
-                path="/product/:id"
+                path="/productlist/:id"
+                element={
+                  <PrivateRoute>
+                    <NewProductDetail />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/productlist"
+                element={
+                  <PrivateRoute>
+                    <NewProductList />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/product/id"
                 element={
                   <PrivateRoute>
                     <ProductDetail />

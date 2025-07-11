@@ -5,7 +5,7 @@ const LoginProvider = ({ children }) => {
   const [user, setUser] = useState("");
   const fakeUSer = {
     email: "test@gmail.com",
-    password: "test@123",
+    password: "96321",
   };
   const login = ({ email, password }) => {
     if (email === fakeUSer.email && password === fakeUSer.password) {

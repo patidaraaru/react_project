@@ -1,13 +1,15 @@
-import React from 'react'
-import RefHook from '../Ref/RefHook'
-import MultipleReducer from '../Reducer/MultipleReducer'
+import React from "react";
+import CustomCard from "../Category/Card";
+import { Box, Container } from "@mui/material";
 
 const Gallery = () => {
   return (
-    <div>
-     <h3>Gallery</h3>
-    </div>
-  )
-}
+    <Container>
+      <Box>
+        <CustomCard />
+      </Box>
+    </Container>
+  );
+};
 
-export default Gallery
+export default Gallery;

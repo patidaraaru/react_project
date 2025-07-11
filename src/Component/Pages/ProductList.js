@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProductList = () => {
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ paddingTop: "100px" }}>
       <h2>Our Products</h2>
 
       <Grid container spacing={3}>
