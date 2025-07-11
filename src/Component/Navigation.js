@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import DarkProvider from "./DarkMode/DarkProvider";
+import LoginContext from "./Auth/LoginContext";
 
 const Navigation = () => {
+  const { logout, user } = useContext(LoginContext);
   return (
     <div>
       <header className="header">
@@ -23,11 +24,13 @@ const Navigation = () => {
           <NavLink to="/gallery" className="nav-link">
             Gallery
           </NavLink>
-          <DarkProvider>
-            <NavLink to="/header" className="nav-link">
-              Header
+          {user ? (
+            <button onClick={logout}>Logout</button>
+          ) : (
+            <NavLink to="/login" className="nav-link">
+              Login
             </NavLink>
-          </DarkProvider>
+          )}
         </nav>
       </header>
     </div>

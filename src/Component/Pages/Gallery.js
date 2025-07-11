@@ -5,7 +5,7 @@ import MultipleReducer from '../Reducer/MultipleReducer'
 const Gallery = () => {
   return (
     <div>
-     <MultipleReducer/>
+     <h3>Gallery</h3>
     </div>
   )
 }
