@@ -1,40 +1,50 @@
-import React from 'react';
-import useForm from '../CustomHook/useForm';
+import React from "react";
+import useForm from "../CustomHook/useForm";
+import { TextField } from "@mui/material";
 
 const Contact = () => {
   const { store, handleChange, handleSubmit } = useForm({
-    name: '',
-    email: '',
-    password: ''
+    name: "",
+    email: "",
+    password: "",
   });
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
+        <TextField
+          label="Text"
           name="name"
+          variant="outlined"
+          margin="normal"
+          type="text"
           value={store.name}
-          placeholder="Name"
           onChange={handleChange}
-        /><br />
-
-        <input
-          type="email"
+          required
+        />
+        <br />
+        <TextField
+          label="Email"
           name="email"
+          variant="outlined"
+          margin="normal"
+          type="email"
           value={store.email}
-          placeholder="Email"
           onChange={handleChange}
-        /><br />
-
-        <input
+          required
+        />
+        <br />
+        <TextField
+          label="password"
+          variant="outlined"
+          margin="normal"
           type="password"
           name="password"
           value={store.password}
-          placeholder="Password"
           onChange={handleChange}
-        /><br />
-
+          required
+        />
+        <br />
         <button type="submit">Submit</button>
       </form>
 

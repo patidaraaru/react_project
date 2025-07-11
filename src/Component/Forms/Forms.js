@@ -39,9 +39,7 @@ const Forms = () => {
       </form>
       <p>
        {result}
-       
       </p>
-
     </div>
   );
 };
