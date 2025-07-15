@@ -18,7 +18,7 @@ const ProductListCard = () => {
         {HairData.map((item, key) => (
           <Grid item xs={12} sm={6} md={4} key={key}>
             <Link to={`/productlist/${item.id}`} style={{ textDecoration: "none" }}>
-              <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: 270 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -26,6 +26,7 @@ const ProductListCard = () => {
                     image={item.img}
                     alt={item.name}
                   />
+
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       {item.name}

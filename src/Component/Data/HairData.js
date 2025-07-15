@@ -5,28 +5,36 @@ import mask from "../../img/mask.jpg";
 
 const HairData = [
   {
-    id: 1,
+    id: 9,
     img: Shampoo,
+    price : 400,
     name: "Revitalizing Shampoo",
     title: "Gently cleanses while restoring moisture balance.",
+    category:'hair'
   },
   {
-    id: 2,
+    id: 10,
     img: Conditioner,
+    price : 500,
     name: "Hydrating Conditioner",
     title: "Leaves hair soft, silky, and manageable.",
+    category:'hair'
   },
   {
-    id: 3,
+    id: 11,
     img: oil,
     name: "Nourishing Hair Oil",
+    price : 400,
     title: "Repairs damage and adds natural shine.",
+    category:'hair'
   },
   {
-    id: 4,
+    id: 12,
     img: mask,
     name: "Deep Conditioning Mask ",
     title: "Intensive treatment for dry or damaged hair.",
+    price : 400,
+      category:'hair'
   },
 ];
 

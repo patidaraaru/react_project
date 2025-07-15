@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <div>
       <header className="header">
-        <div className="logo">🦋 AartiApp</div>
+        <div className="logo">🦋App</div>
         <nav className="nav-links">
           <NavLink to="/" className="nav-link">
             Home
@@ -23,6 +23,12 @@ const Navigation = () => {
           </NavLink>
           <NavLink to="/gallery" className="nav-link">
             Gallery
+          </NavLink>
+          <NavLink to="/wish-list" className="nav-link">
+            Wish List
+          </NavLink>
+          <NavLink to="/hair-care" className="nav-link">
+            Haircare
           </NavLink>
           {user ? (
             <button onClick={logout}>Logout</button>

@@ -7,8 +7,6 @@ import {
   Button,
   Container,
   Box,
-  Card,
-  CardMedia,
   Divider,
 } from "@mui/material";
 
@@ -23,63 +21,74 @@ const NewProductDetail = () => {
       </Typography>
     );
   }
+  const AddToCartButton = () =>{
+   localStorage.setItem("AddProductData" , JSON.stringify(product));
+  }
 
   return (
-    <Container sx={{ pt: 10 }}>
-      <Grid container spacing={5}>
-        <Grid item xs={12} md={6}>
-          <Card>
-            <CardMedia
-              component="img"
-              image={product.img}
-              alt={product.name}
-              sx={{ objectFit: "cover", maxHeight: 500 }}
-            />
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Typography variant="h4" gutterBottom>
-            {product.name}
-          </Typography>
-          <Typography variant="h6" color="text.secondary" gutterBottom>
-            {product.title}
-          </Typography>
-          <Typography variant="body1" sx={{ mt: 2, mb: 3 }}>
-            {product.description ||
-              "This nourishing product is designed to strengthen and revitalize your hair with all-natural ingredients."}
-          </Typography>
-
-          <Typography variant="h5" sx={{ mb: 3 }}>
-            ₹{product.price}
-          </Typography>
-
-          <Box sx={{ display: "flex", gap: 2 }}>
-            <Button variant="contained" color="primary">
-              Add to Cart
-            </Button>
-            <Button variant="outlined" color="primary">
-              Buy Now
-            </Button>
-          </Box>
-
-          {/* Optional: Ingredients or Benefits */}
-          <Divider sx={{ my: 4 }} />
-          <Typography variant="subtitle1" fontWeight="bold">
-            Key Ingredients:
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {product.ingredients || "Argan Oil, Aloe Vera, Keratin, Vitamin E"}
-          </Typography>
-
-          <Typography variant="subtitle1" fontWeight="bold" sx={{ mt: 3 }}>
-            How to Use:
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {product.usage ||
-              "Apply to damp hair, leave in for 5 minutes, and rinse thoroughly."}
-          </Typography>
-        </Grid>
+    <Container sx={{ py: 6 }}>
+    <Grid container spacing={5}>
+      <Grid item xs={12} md={6}>
+        <Box
+          sx={{
+            maxHeight: 500,
+            maxWidth: 500,
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src={product.img}
+            alt={product.name}
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "cover",
+              borderRadius: "8px",
+            }}
+          />
+        </Box>
       </Grid>
+      <Grid item xs={12} md={6} sx={{maxWidth:600}}>
+        <Typography variant="h4">{product.name}</Typography>
+        <Typography variant="h6" color="text.secondary">
+          {product.title}
+        </Typography>
+        <Typography variant="body1" sx={{ mt: 2, mb: 3 }}>
+          {product.description ||
+            "This nourishing product is designed to strengthen and revitalize your hair with all-natural ingredients."}
+        </Typography>
+
+        <Typography variant="h5" sx={{ mb: 3 }}>
+          ₹{product.price}
+        </Typography>
+
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <Button variant="contained" color="primary" onClick={AddToCartButton}>
+            Add to Cart
+          </Button>
+          <Button variant="outlined" color="primary">
+            Buy Now
+          </Button>
+        </Box>
+
+        <Divider sx={{ my: 4 }} />
+
+        <Typography variant="subtitle1" fontWeight="bold">
+          Key Ingredients:
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {product.ingredients || "Argan Oil, Aloe Vera, Keratin, Vitamin E"}
+        </Typography>
+
+        <Typography variant="subtitle1" fontWeight="bold" sx={{ mt: 3 }}>
+          How to Use:
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {product.usage ||
+            "Apply to damp hair, leave in for 5 minutes, and rinse thoroughly."}
+        </Typography>
+      </Grid>
+    </Grid>
     </Container>
   );
 };

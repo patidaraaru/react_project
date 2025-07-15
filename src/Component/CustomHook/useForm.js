@@ -1,17 +1,16 @@
-// ✅ useForm.js
 import { useEffect, useState } from "react";
 
 const useForm = (initialValues) => {
-  const [store, setStore] = useState(()=>{
-    const  getData = localStorage.getItem("storeData");
-    if(!getData) return []
+  const [store, setStore] = useState(() => {
+    const getData = localStorage.getItem("storeData");
+    if (!getData) return [];
     return JSON.parse(getData);
   });
+
   console.log(store);
-  
- useEffect(()=>{
-   localStorage.setItem("storeData" , JSON.stringify(store))
- },[store]);
+  useEffect(() => {
+    localStorage.setItem("storeData", JSON.stringify(store));
+  }, [store]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,13 +18,12 @@ const useForm = (initialValues) => {
       ...prev,
       [name]: value,
     }));
-   
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted:", store);
-    setStore(initialValues)
+    setStore(initialValues);
   };
 
   return { store, handleChange, handleSubmit };

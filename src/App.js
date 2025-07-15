@@ -8,6 +8,10 @@ import Navigation from "./Component/Navigation";
 import ProductListCard from "./Component/Category/ProductListCard";
 import NewProductList from "./Component/Pages/NewProductList";
 import NewProductDetail from "./Component/Pages/NewProductDetail";
+import Wishlist from "./Component/Pages/Wishlist";
+import HairCare from "./Component/Category/HairCare";
+import SkinCare from "./Component/Category/SkinCare";
+import BodyCare from "./Component/Category/BodyCare";
 
 function App() {
   const Home = lazy(() => import("./Component/Pages/Home"));
@@ -81,6 +85,38 @@ function App() {
                 element={
                   <PrivateRoute>
                     <NewProductList />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/wish-list"
+                element={
+                  <PrivateRoute>
+                    <Wishlist />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/hair-care"
+                element={
+                  <PrivateRoute>
+                    <HairCare />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/skin-care"
+                element={
+                  <PrivateRoute>
+                    <SkinCare />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/body-care"
+                element={
+                  <PrivateRoute>
+                    <BodyCare />
                   </PrivateRoute>
                 }
               />
