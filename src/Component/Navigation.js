@@ -25,10 +25,10 @@ const Navigation = () => {
             Gallery
           </NavLink>
           <NavLink to="/wish-list" className="nav-link">
-            Wish List
+            WishList
           </NavLink>
-          <NavLink to="/hair-care" className="nav-link">
-            Haircare
+          <NavLink to="/add-cart" className="nav-link">
+           Add to cart
           </NavLink>
           {user ? (
             <button onClick={logout}>Logout</button>

@@ -2,7 +2,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-const ShortBanner = () => {
+const ShortBanner = ({ title = "Page" }) => {
   return (
     <Box
       sx={{
@@ -17,7 +17,7 @@ const ShortBanner = () => {
       }}
     >
       <Typography variant="h4" fontWeight="bold">
-      Product
+         {title}
       </Typography>
     </Box>
   );

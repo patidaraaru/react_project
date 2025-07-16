@@ -11,6 +11,7 @@ const SkinDate = [
     name: "skin Shampoo",
     title: "Gently cleanses while restoring moisture balance.",
     category: "skin",
+    num :1,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const SkinDate = [
     name: "Skin Conditioner",
     title: "Leaves hair soft, silky, and manageable.",
     category: "skin",
+    num :1,
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const SkinDate = [
     price: 400,
     title: "Repairs damage and adds natural shine.",
     category: "skin",
+    num :1,
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const SkinDate = [
     title: "Intensive treatment for dry or damaged hair.",
     price: 400,
     category: "skin",
+    num :1,
   },
 ];
 

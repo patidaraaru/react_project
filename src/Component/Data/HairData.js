@@ -10,7 +10,8 @@ const HairData = [
     price : 400,
     name: "Revitalizing Shampoo",
     title: "Gently cleanses while restoring moisture balance.",
-    category:'hair'
+    category:'hair',
+    num :1,
   },
   {
     id: 10,
@@ -18,7 +19,8 @@ const HairData = [
     price : 500,
     name: "Hydrating Conditioner",
     title: "Leaves hair soft, silky, and manageable.",
-    category:'hair'
+    category:'hair',
+    num :1,
   },
   {
     id: 11,
@@ -26,7 +28,8 @@ const HairData = [
     name: "Nourishing Hair Oil",
     price : 400,
     title: "Repairs damage and adds natural shine.",
-    category:'hair'
+    category:'hair',
+    num :1,
   },
   {
     id: 12,
@@ -34,7 +37,8 @@ const HairData = [
     name: "Deep Conditioning Mask ",
     title: "Intensive treatment for dry or damaged hair.",
     price : 400,
-      category:'hair'
+      category:'hair',
+      num :1,
   },
 ];
 

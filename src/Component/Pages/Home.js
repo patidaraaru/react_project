@@ -6,8 +6,11 @@ import "swiper/css/pagination";
 import ShopCategory from "../Category/ShopCategory";
 import BannerData from "../Data/BannerData";
 import { Container } from "@mui/material";
+import AllProduct from "../Data/AllProduct";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
+
   return (
     <>
       <div style={{ minHeight: "50vh", margin: "0 auto" }}>
@@ -50,7 +53,10 @@ const Home = () => {
       </div>
       <Container>
         <ShopCategory/>
+        <h1>All Product</h1>
+        <AllProduct/>
       </Container>
+      <Footer/>
     </>
   );
 };

@@ -14,7 +14,7 @@ const CustomCard = () => {
         {CategoryData.map((item, key) => (
           <Link to={item.link}>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: '370px' }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -39,6 +39,7 @@ const CustomCard = () => {
           </Link>
         ))}
       </Grid>
+      
     </>
   );
 };

@@ -24,6 +24,7 @@ const useForm = (initialValues) => {
     e.preventDefault();
     console.log("Submitted:", store);
     setStore(initialValues);
+    
   };
 
   return { store, handleChange, handleSubmit };

@@ -21,7 +21,7 @@ const BodyCare = () => {
         {BodyData.map((item, key) => (
           <Grid item xs={12} sm={6} md={4} key={key}>
             <Link
-              to={`/productlist/${item.id}`}
+              to={`/productlist/body/${item.id}`}
               style={{ textDecoration: "none" }}
             >
               <Card sx={{ maxWidth: 270 }}>

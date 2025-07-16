@@ -11,6 +11,7 @@ const BodyData = [
     name: "Body Shampoo",
     title: "Gently cleanses while restoring moisture balance.",
     category: "body",
+    num :1,
   },
   {
     id: 7,
@@ -19,6 +20,7 @@ const BodyData = [
     name: "Body Conditioner",
     title: "Leaves hair soft, silky, and manageable.",
     category: "body",
+    num :1,
   },
   {
     id: 6,
@@ -27,6 +29,7 @@ const BodyData = [
     price: 400,
     title: "Repairs damage and adds natural shine.",
     category: "body",
+    num :1,
   },
   {
     id: 8,
@@ -35,6 +38,7 @@ const BodyData = [
     title: "Intensive treatment for dry or damaged hair.",
     category: "body",
     price: 400,
+    num :1,
   },
 ];
 

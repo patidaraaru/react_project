@@ -6,7 +6,7 @@ import { Container } from "@mui/material";
 const NewProductList = () => {
   return (
     <>
-      <ShortBanner />
+      <ShortBanner  title='About Us'/>
       <Container>
         <ProductListCard />
       </Container>

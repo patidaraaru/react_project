@@ -1,6 +1,8 @@
 import React from "react";
 import useForm from "../CustomHook/useForm";
-import { TextField } from "@mui/material";
+import { Box, TextField, Button, Typography } from "@mui/material";
+import ShortBanner from "../Banner/ShortBanner";
+import Footer from "../Footer/Footer";
 
 const Contact = () => {
   const { store, handleChange, handleSubmit } = useForm({
@@ -11,47 +13,73 @@ const Contact = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <TextField
-          label="Text"
-          name="name"
-          variant="outlined"
-          margin="normal"
-          type="text"
-          value={store.name}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <TextField
-          label="Email"
-          name="email"
-          variant="outlined"
-          margin="normal"
-          type="email"
-          value={store.email}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <TextField
-          label="password"
-          variant="outlined"
-          margin="normal"
-          type="password"
-          name="password"
-          value={store.password}
-          onChange={handleChange}
-          required
-        />
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+      <ShortBanner title="Contact" />
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          px: 2,
+        }}
+      >
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
+          sx={{
+            maxWidth: "500px",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+          }}
+        >
+          <TextField
+            label="Name"
+            name="name"
+            variant="outlined"
+            type="text"
+            value={store.name}
+            onChange={handleChange}
+            required
+            fullWidth
+          />
 
-      <h3>Live Preview</h3>
-      <p>Name: {store.name}</p>
-      <p>Email: {store.email}</p>
-      <p>Password: {store.password}</p>
+          <TextField
+            label="Email"
+            name="email"
+            variant="outlined"
+            type="email"
+            value={store.email}
+            onChange={handleChange}
+            required
+            fullWidth
+          />
+
+          <TextField
+            label="Password"
+            name="password"
+            variant="outlined"
+            type="password"
+            value={store.password}
+            onChange={handleChange}
+            required
+            fullWidth
+          />
+
+          <Button variant="contained" type="submit">
+            Submit
+          </Button>
+        </Box>
+
+        <Box mt={4}>
+          <Typography variant="h6">Live Preview</Typography>
+          <Typography>Name: {store.name}</Typography>
+          <Typography>Email: {store.email}</Typography>
+          <Typography>Password: {store.password}</Typography>
+        </Box>
+      </Box>
+      <Footer/>
     </>
   );
 };

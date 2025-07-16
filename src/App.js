@@ -12,6 +12,7 @@ import Wishlist from "./Component/Pages/Wishlist";
 import HairCare from "./Component/Category/HairCare";
 import SkinCare from "./Component/Category/SkinCare";
 import BodyCare from "./Component/Category/BodyCare";
+import AddToCart from "./Component/Pages/AddToCart";
 
 function App() {
   const Home = lazy(() => import("./Component/Pages/Home"));
@@ -73,13 +74,22 @@ function App() {
               />
 
               <Route
-                path="/productlist/:id"
+                path="/productlist/:category/:id"
                 element={
                   <PrivateRoute>
                     <NewProductDetail />
                   </PrivateRoute>
                 }
               />
+              <Route
+                path="/wish-list"
+                element={
+                  <PrivateRoute>
+                    <Wishlist/>
+                  </PrivateRoute>
+                }
+              />
+              
               <Route
                 path="/productlist"
                 element={
@@ -89,10 +99,10 @@ function App() {
                 }
               />
               <Route
-                path="/wish-list"
+                path="/add-cart"
                 element={
                   <PrivateRoute>
-                    <Wishlist />
+                    <AddToCart />
                   </PrivateRoute>
                 }
               />

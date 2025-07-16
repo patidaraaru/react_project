@@ -1,11 +1,12 @@
-import React from 'react'
-import ApiCall from '../API/ApiCall'
+import ShortBanner from '../Banner/ShortBanner'
+import Footer from '../Footer/Footer'
 
 const About = () => {
   return (
-    <div>
-      <ApiCall/>
-    </div>
+    <>
+      <ShortBanner title='About Us'/>
+      <Footer/>
+    </>
   )
 }
 
