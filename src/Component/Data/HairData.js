@@ -9,7 +9,7 @@ const HairData = [
     img: Shampoo,
     price : 400,
     name: "Revitalizing Shampoo",
-    title: "Gently cleanses while restoring moisture balance.",
+    title: "Gently cleanses while restoring moisture balanceddd.",
     category:'hair',
     num :1,
   },
